@@ -15,6 +15,44 @@ let gameSpeedDelay = 200;
 let gameStarted = false;
 let isPaused = false;
 
+document.getElementById('up-btn').addEventListener('click', function() { changeDirection('up'); });
+document.getElementById('down-btn').addEventListener('click', function() { changeDirection('down'); });
+document.getElementById('left-btn').addEventListener('click', function() { changeDirection('left'); });
+document.getElementById('right-btn').addEventListener('click', function() { changeDirection('right'); });
+document.getElementById('enter-btn').addEventListener('click', function() {
+  if (!gameStarted) {
+    startGame();
+  }
+});
+document.getElementById('pause-btn').addEventListener('click', pauseGame);
+
+/**
+ * Changes the direction of the game.
+ * 
+ * @param {string} newDirection - The new direction to change to.
+ */
+function changeDirection(newDirection) {
+  if (!isOppositeDirection(newDirection, direction) && gameStarted && !isPaused) {
+    direction = newDirection;
+  }
+}
+
+/**
+ * Pauses or resumes the game.
+ */
+function pauseGame() {
+  if (gameStarted && !isPaused) {
+    clearInterval(gameInterval); 
+    isPaused = true;
+    instructionText.textContent = 'Paused. Press "Pause" to resume.'; 
+    instructionText.style.display = 'block';
+  } else if (isPaused) {
+    isPaused = false;
+    gameInterval = setInterval(gameLoop, gameSpeedDelay);
+    instructionText.style.display = 'none';
+  }
+}
+
 /**
  * Clears the game board and redraws the snake and food.
  * Also updates the current score.
@@ -127,9 +165,10 @@ function startGame() {
   if (playerName.match(/[A-Za-z0-9]+/)) {
       document.querySelector('.game-board').style.display = 'block';
       document.querySelector('.form-group').style.display = 'none';
-      instructionText.style.display = 'block';
-      logo.style.display = 'block';
-      gameStarted = false;
+      instructionText.style.display = 'none'; 
+      logo.style.display = 'none'; 
+      gameStarted = true; 
+      gameInterval = setInterval(gameLoop, gameSpeedDelay);
       updateScore(true);
   } else {
       alert('Please enter a valid name. Only English letters and numbers allowed.');
