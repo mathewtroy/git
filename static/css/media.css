@@ -21,6 +21,10 @@
     .game-board, .form-group {
         padding: 30px; 
     }
+
+    .controls {
+        display: none;
+    }
 }
   
 @media only screen and (max-width: 768px) {
@@ -49,6 +53,10 @@
 
     .scores {
         order: -1; 
+    }
+
+    .controls {
+        display: none;
     }
    
 }
@@ -84,5 +92,8 @@
     .scores {
         order: -1; 
     }
-     
+
+    .controls {
+        display: none;
+    }
 }
