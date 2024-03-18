@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake project</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/media.css">
+  </head>
+
+  <body>
+
+    <div>
+        <header>
+          <nav>
+            <img id="logo" src="static/images/game.png" class="rotating" 
+                 alt="snake" width="48" height="48" >
+            <h1>Snake game</h1>
+          </nav>
+        </header>
+    </div>
+
+    <div class="form-group">
+      <form id="nameForm">
+        <label for="playerName">Enter your name:</label>
+        <input
+          type="text"
+          id="playerName"
+          name="playerName"
+          maxlength="20"
+          pattern="[A-Za-z0-9]+"
+          title="Only English letters and numbers allowed"
+        >
+        <button type="button" onclick="startGame()">Start Game</button>
+      </form>
+    </div>
+
+    <section class="game-board">
+
+      <div class="game-state">
+        <h1 id="instruction">Press "ENTER" to start game</h1>
+      </div>  
+
+     <div class="container">
+
+        <div class="controls">
+          <h1>Controls:</h1>
+          <p class="control-btn">w - move up</p>
+          <p class="control-btn">s - move down</p>
+          <p class="control-btn">a - move left</p>
+          <p class="control-btn">d - move right</p>
+        </div>
+
+        <div class="game-border-1">
+          <div class="game-border-2">
+            <div class="game-border-3">
+              <div id="game-board"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scores">
+            <h1>Score result:</h1>
+            <p id="currentScore">Name <span id="score">000</span></p>            
+            <p>Best score: <span id="highScore">000</span></p>
+
+            <div id="lastGamesResults">
+                <p> <span id="lastGame1">000</span></p>
+                <p> <span id="lastGame2">000</span></p>
+                <p> <span id="lastGame3">000</span></p>
+            </div>
+        </div>
+
+     </div>
+
+    </section>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

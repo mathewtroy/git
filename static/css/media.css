@@ -1,0 +1,88 @@
+/*
+ *  Media queries
+ */
+ 
+@media only screen and (max-width: 990px) {
+    
+    html{
+        font-size: 90%;
+    }
+    
+    #instruction {
+        top: 10%; 
+        text-align: center;
+    }
+
+    #game-board {
+        grid-template-columns: repeat(20, 18px);
+        grid-template-rows: repeat(20, 18px);
+    }
+
+    .game-board, .form-group {
+        padding: 30px; 
+    }
+}
+  
+@media only screen and (max-width: 768px) {
+    
+    html{
+        font-size: 80%;
+    }
+
+    #instruction {
+        top: 10%;
+        text-align: center;
+    }
+
+    #game-board {
+        grid-template-columns: repeat(20, 15px);
+        grid-template-rows: repeat(20, 15px);
+    }
+
+    .game-board, .form-group {
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column; 
+    }
+
+    .scores {
+        order: -1; 
+    }
+   
+}
+  
+@media only screen and (max-width: 480px) {
+    
+    html {
+        font-size: 70%;
+    }
+
+    #instruction {
+        top: 5%; 
+        text-align: center;
+    }
+
+    #game-board {
+        grid-template-columns: repeat(20, 10px);
+        grid-template-rows: repeat(20, 10px);
+    }
+
+    .game-board, .form-group {
+        padding: 10px;
+    }
+
+    header {
+        font-size: 14px; 
+    }
+
+    .container {
+        flex-direction: column; 
+    }
+
+    .scores {
+        order: -1; 
+    }
+     
+}
