@@ -22,6 +22,12 @@
     font-family: 'Arial', monospace;
 }
   
+* {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    touch-action: manipulation;
+}
+
 header nav {
     display: -webkit-box;
     display: -ms-flexbox;
