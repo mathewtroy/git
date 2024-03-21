@@ -185,8 +185,8 @@ body {
 }
   
 .game-border-2 {
-    border: #d7b004 solid 8px;
-    border-radius: 26px;
+    border: #d7b004 solid 10px;
+    border-radius: 25px;
 }
   
 .game-border-3 {
@@ -200,6 +200,8 @@ body {
     flex-direction: column; 
     align-items: center; 
     padding: 10px; 
+    border-radius: 20px;
+
 }
 
 .bottom {
@@ -208,6 +210,8 @@ body {
     background-color: #d7b004; 
     width: 100%; 
     padding: 10px; 
+    border-radius: 20px;
+
 }
 
 .container {
