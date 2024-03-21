@@ -58,6 +58,10 @@
     .controls {
         display: none;
     }
+
+    #lastGamesResults {
+        display: none;
+    }
    
 }
   
@@ -94,6 +98,10 @@
     }
 
     .controls {
+        display: none;
+    }
+
+    #lastGamesResults {
         display: none;
     }
 }

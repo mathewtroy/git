@@ -178,6 +178,7 @@ body {
     grid-template-rows: repeat(20, 20px);
     margin: 5px;
 }
+
 .game-border-1 {
     border: #030931 solid 10px;
     border-radius: 30px;
@@ -192,7 +193,23 @@ body {
     border: #032a51 solid 30px;
     border-radius: 20px;
 }
-  
+ 
+.panel {
+    background-color: #d7b004; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px; 
+}
+
+.bottom {
+    display: flex; 
+    justify-content: center; 
+    background-color: #d7b004; 
+    width: 100%; 
+    padding: 10px; 
+}
+
 .container {
     display: -webkit-box;
     display: -ms-flexbox;
