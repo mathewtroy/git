@@ -26,6 +26,16 @@ document.getElementById('enter-btn').addEventListener('click', function() {
 });
 document.getElementById('pause-btn').addEventListener('click', pauseGame);
 
+document.querySelectorAll('button').forEach(button => {
+  button.addEventListener('touchstart', () => {
+    button.classList.add('hover');
+  });
+  button.addEventListener('touchend', () => {
+    button.classList.remove('hover');
+  });
+});
+
+
 /**
  * Changes the direction of the game.
  * 
